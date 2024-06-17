@@ -6,14 +6,9 @@ import seaborn as sns
 from geopy.geocoders import Nominatim
 from geopy.distance import geodesic
 import geopandas as gpd
-from dotenv import load_dotenv
-import os
 
-# Load environment variables from .env file
-load_dotenv()
-
-# Get the API key from the environment variable
-api_key = os.getenv('GOOGLE_API_KEY')
+# Get the API key from the secrets
+api_key = st.secrets["api_keys"]["google_places"]
 
 # Define the resource ID and API endpoint
 resource_id = '5de268d6-e3a5-4f5c-b43a-0d293b377b50'
